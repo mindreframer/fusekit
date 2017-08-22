@@ -9,13 +9,21 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "fuse-box": "^2.2.2"
+    "@types/node": "^8.0.24",
+    "@types/react": "^15.0.15",
+    "@types/react-dom": "^0.14.23",
+    "fuse-box": "^2.2.2",
+    "fuse-box-typechecker": "git://github.com/fuse-box/fuse-box-typechecker",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.6.0",
+    "tslint-react": "^2.5.0",
+    "typescript": "^2.4.2",
+    "uglify-js": "^2.8.22"
   },
   "dependencies": {
     "mobx": "^3.2.2",
     "mobx-react": "^4.2.2",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "typescript": "^2.4.2"
+    "react-dom": "^15.6.1"
   }
 }
