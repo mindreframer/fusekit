@@ -22,8 +22,6 @@ ReactDOM.render(
 
 
 
-
-
 // Custom HMR, will forcefully reload if you edit a store file or
 // one listed under fullPaths - Keeps state in sync
 import { setStatefulModules } from 'fuse-box/modules/fuse-hmr';
