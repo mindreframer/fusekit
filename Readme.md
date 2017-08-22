@@ -4,18 +4,18 @@
 
     FuseBox
       - Bundle split
-        - Vendor split
-        - App split
+        - Vendor split (@done)
+        - App split (@done)
         - section1 split
         - section2 split
       - Typescript
         - linting
 
       - MobX stores setup
-        - MobX root store
-        - MobX UI store
+        - MobX root store (@done)
+        - MobX UI store (@done)
         - MobX domain store(s)
-        - Provider / inject with React
+        - Provider / inject with React (@done)
         - Typescript interfaces (IStore + ...)
         - hot-code-reload with stateful stores
           - custom HMR loader, that ignores stores / other stateful components
