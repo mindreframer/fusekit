@@ -13,6 +13,8 @@ container.setAttribute("id", "root");
 document.body.appendChild(container);
 
 
+
+require("tachyons/tachyons.css")
 ReactDOM.render(
   <Provider  { ...{rootStore: rootStore} }>
     <App />
