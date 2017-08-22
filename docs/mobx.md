@@ -66,14 +66,16 @@ Links
     - https://github.com/xgrommx/mobx-ecosystem/
 
 
+How to structure your stores
+    - https://mobx.js.org/best/store.html
+    - https://www.google.de/amp/s/amp.reddit.com/r/reactjs/comments/5xst3t/mobx_store_structure/
+
 Best Practices:
     - https://hackernoon.com/how-to-decouple-state-and-ui-a-k-a-you-dont-need-componentwillmount-cc90b787aa37
-    - https://mobx.js.org/best/store.html
     - http://mobx-patterns.surge.sh/#39
     - https://alexhisen.gitbooks.io/mobx-recipes/content/auto-save.html
-    - https://github.com/mobxjs/mobx/issues/300 - How to structure your stores
+    - https://github.com/mobxjs/mobx/issues/300 -
     https://www.reddit.com/r/reactjs/comments/4fojit/what_is_your_structure_when_using_mobx_with/?st=j4uyf2p7&- sh=dd3db62f
-    - https://www.google.de/amp/s/amp.reddit.com/r/reactjs/comments/5xst3t/mobx_store_structure/
     - https://blog.pixelingene.com/2016/10/effective-mobx-patterns-part-3/
     - https://github.com/mweststrate/state-routing-blog-sources
     - https://medium.com/@mweststrate/3-reasons-why-i-stopped-using-react-setstate-ab73fc67a42e
