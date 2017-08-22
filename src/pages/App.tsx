@@ -25,7 +25,7 @@ class App extends Component<ComponentProps, any> {
         App on &nbsp;
         {rootStore.viewStore.page}
         <div>
-          Counter {this.count}
+          Counter ... {this.count}
           <br />
           <button onClick={this.handleInc}> + </button>
           <button onClick={this.handleDec}> - </button>
