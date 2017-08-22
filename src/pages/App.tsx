@@ -4,23 +4,22 @@ import { observable } from "mobx";
 import { observer, inject } from "mobx-react";
 import RootStore from "../stores/RootStore";
 
-
-
-// https://github.com/mobxjs/mobx-react#strongly-typing-inject
-interface Props {
-  rootStore: RootStore; // needs to be optional bc. of Provider
+interface ComponentProps {
 }
 
-// @inject(allStores => ({
-//   view: allStores.view
-// }))
+interface InjectedProps extends ComponentProps {
+  rootStore: RootStore;
+}
+
 @inject("rootStore")
 @observer
-class App extends Component<Props, any> {
+class App extends Component<ComponentProps, any> {
+  get injected() {
+    return this.props as InjectedProps;
+  }
   @observable count = 0;
   render() {
-    // console.log(this.props);
-    let { rootStore } = this.props;
+    let { rootStore } = this.injected;
     return (
       <div>
         App on &nbsp;
@@ -42,5 +41,4 @@ class App extends Component<Props, any> {
     this.count = this.count - 1;
   };
 }
-
-export default App;
+export default App
