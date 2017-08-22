@@ -2,29 +2,29 @@ import * as React from "react";
 const { Component } = React;
 import { observable } from "mobx";
 import { observer, inject } from "mobx-react";
-import ViewStore from "../stores/ViewStore";
+import RootStore from "../stores/RootStore";
 
 
 
 // https://github.com/mobxjs/mobx-react#strongly-typing-inject
 interface Props {
-  view?: ViewStore; // needs to be optional bc. of Provider
+  rootStore: RootStore; // needs to be optional bc. of Provider
 }
 
 // @inject(allStores => ({
 //   view: allStores.view
 // }))
-@inject("view")
+@inject("rootStore")
 @observer
 class App extends Component<Props, any> {
   @observable count = 0;
   render() {
     // console.log(this.props);
-    let { view } = this.props;
+    let { rootStore } = this.props;
     return (
       <div>
-        Ap on &nbsp;
-        {view.currentUrl}
+        App on &nbsp;
+        {rootStore.viewStore.page}
         <div>
           Counter {this.count}
           <br />
@@ -36,7 +36,7 @@ class App extends Component<Props, any> {
   }
 
   handleInc = () => {
-    this.count = this.count + 1;
+    this.count = this.count + 4;
   };
   handleDec = () => {
     this.count = this.count - 1;
