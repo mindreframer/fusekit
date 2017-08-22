@@ -71,6 +71,7 @@ Best Practices:
     - https://mobx.js.org/best/store.html
     - http://mobx-patterns.surge.sh/#39
     - https://alexhisen.gitbooks.io/mobx-recipes/content/auto-save.html
+    - https://github.com/mobxjs/mobx/issues/300 - How to structure your stores
     https://www.reddit.com/r/reactjs/comments/4fojit/what_is_your_structure_when_using_mobx_with/?st=j4uyf2p7&- sh=dd3db62f
     - https://www.google.de/amp/s/amp.reddit.com/r/reactjs/comments/5xst3t/mobx_store_structure/
     - https://blog.pixelingene.com/2016/10/effective-mobx-patterns-part-3/
