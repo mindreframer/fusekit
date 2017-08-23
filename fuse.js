@@ -1,9 +1,12 @@
-const { FuseBox, HTMLPlugin, Sparky, WebIndexPlugin } = require("fuse-box");
+const { FuseBox, HTMLPlugin, Sparky, WebIndexPlugin, SassPlugin, CSSPlugin } = require("fuse-box");
 
 const fuse = FuseBox.init({
 homeDir: "src",
   output: "dist/$name.js",
-  plugins: [WebIndexPlugin({ title: "Welcome to FuseBox" })]
+  plugins: [
+    WebIndexPlugin({ template: "src/index.html" }),
+    [SassPlugin(), CSSPlugin()],
+  ]
 });
 
 fuse.dev({ port: 4445 });
@@ -26,7 +29,7 @@ fuse
   // enable sourcemaps for our package
   .sourceMaps(true)
   // bundle without deps (we have a vendor for that) + without the api
-  .instructions(" !> [index.tsx]");
+  .instructions(" !> [index.tsx] +fuse-box-css");
 
 Sparky.task("default", () => {
   //   fuse.bundle("app").instructions(`>index.ts`);

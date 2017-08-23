@@ -16,7 +16,7 @@
         - MobX UI store (@done)
         - MobX domain store(s)
         - Provider / inject with React (@done)
-        - Typescript interfaces (IStore + ...)
+        - Typescript interfaces (IStore + ...) (not needed?)
         - hot-code-reload with stateful stores
           - custom HMR loader, that ignores stores / other stateful components
 

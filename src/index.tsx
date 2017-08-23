@@ -12,9 +12,10 @@ let container = document.createElement("div");
 container.setAttribute("id", "root");
 document.body.appendChild(container);
 
+import "./styles/index.scss";
+import "./styles/foo.scss";
 
-
-require("tachyons/tachyons.css")
+// require("tachyons/tachyons.css")
 ReactDOM.render(
   <Provider  { ...{rootStore: rootStore} }>
     <App />
