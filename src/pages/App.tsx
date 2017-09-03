@@ -11,6 +11,11 @@ interface InjectedProps extends ComponentProps {
   rootStore: RootStore;
 }
 
+const classes = {
+  topContainer: "bg-orange f4",
+  counterContainer: "f5 pv4 ph2"
+}
+
 @inject("rootStore")
 @observer
 class App extends Component<ComponentProps, any> {
@@ -21,10 +26,9 @@ class App extends Component<ComponentProps, any> {
   render() {
     let { rootStore } = this.injected;
     return (
-      <div>
-        App on &nbsp;
-        {rootStore.viewStore.page}
-        <div>
+      <div className={classes.topContainer}>
+        App on {rootStore.viewStore.page}
+        <div className={classes.counterContainer}>
           Counter ... {this.count}
           <br />
           <button onClick={this.handleInc}> + </button>
@@ -35,7 +39,7 @@ class App extends Component<ComponentProps, any> {
   }
 
   handleInc = () => {
-    this.count = this.count + 4;
+    this.count = this.count + 1;
   };
   handleDec = () => {
     this.count = this.count - 1;
