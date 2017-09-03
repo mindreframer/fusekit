@@ -14,8 +14,8 @@ const CTA: React.StatelessComponent<Props> = (props)=> {
         <div className="dt-ns dt--fixed-ns w-100">
           <div className="pa3 pa4-ns dtc-ns v-mid">
             <div>
-              <h2 className="fw4 blue mt0 mb3">{title}</h2>
-              <p className="black-70 measure lh-copy mv0">
+              <h2 className="fw4 helvetica blue mt0 mb3">{title}</h2>
+              <p className="black-70 measure lh-copy mv0 ">
                 {desc}
               </p>
             </div>
@@ -300,9 +300,9 @@ const Navigation:React.StatelessComponent<{}> = ()=> {
   return(
     <header className="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
       <nav className="f6 fw6 ttu tracked">
-        <a className="link dim white dib mr3" href="#" title="Home">Home</a>
-        <a className="link dim white dib mr3" href="#" title="About">About</a>
+        <a className="link dim white dib mr3" href="#" title="MyApp">MyApp</a>
         <a className="link dim white dib mr3" href="#" title="Store">Store</a>
+        <a className="link dim white dib mr3" href="#" title="About">About</a>
         <a className="link dim white dib" href="#" title="Contact">Contact</a>
       </nav>
     </header>

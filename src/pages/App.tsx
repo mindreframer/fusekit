@@ -15,7 +15,7 @@ interface InjectedProps extends ComponentProps {
 
 const classes = {
   topContainer: " f4",
-  counterContainer: "f5 pv4 ph2 pt1  bg-orange"
+  counterContainer: "f5 pv4 ph2 pt1 bg-orange"
 }
 
 @inject("rootStore")
@@ -28,13 +28,17 @@ class App extends Component<ComponentProps, any> {
   render() {
     let { rootStore } = this.injected;
     return (
-      <div className={classes.topContainer}>
-        <Navigation />
-        {this.counterComp()}
-        <CTA title={"Awesome news!"} desc={"We have a new product online "} cta={"Check it out!"} />
-        <Albums />
-        <FullColorPage />
-        <FollowerNotifications />
+      <div >
+        <div className={"pb5"}>
+          <Navigation />
+        </div>
+        <div className={classes.topContainer}>
+          {this.counterComp()}
+          <CTA title={"Latest Updates"} desc={"We have a new product online "} cta={"Try now!"} />
+          <Albums />
+          <FullColorPage />
+          <FollowerNotifications />
+        </div>
       </div>
     );
   }
