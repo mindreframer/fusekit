@@ -14,6 +14,7 @@ document.body.appendChild(container);
 
 import "./styles/index.scss";
 import "./styles/foo.scss";
+import "./vendor/purple3.min.css";
 
 // require("tachyons/tachyons.css")
 ReactDOM.render(
