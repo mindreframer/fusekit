@@ -4,7 +4,7 @@ import { observable } from "mobx";
 import { observer, inject } from "mobx-react";
 import RootStore from "../stores/RootStore";
 
-import {CTA, ProductCard, Albums} from "../components/cta"
+import {CTA, ProductCard, Albums, FullColorPage, FollowerNotifications, Navigation} from "../components/cta"
 
 interface ComponentProps {
 }
@@ -15,7 +15,7 @@ interface InjectedProps extends ComponentProps {
 
 const classes = {
   topContainer: " f4",
-  counterContainer: "f5 pv4 ph2 bg-orange"
+  counterContainer: "f5 pv4 ph2 pt1  bg-orange"
 }
 
 @inject("rootStore")
@@ -29,18 +29,27 @@ class App extends Component<ComponentProps, any> {
     let { rootStore } = this.injected;
     return (
       <div className={classes.topContainer}>
-        App on {rootStore.viewStore.page}
-        <div className={classes.counterContainer}>
-          Counter ... {this.count}
-          <br />
-          <button onClick={this.handleInc}> + </button>
-          <button onClick={this.handleDec}> - </button>
-        </div>
-
+        <Navigation />
+        {this.counterComp()}
         <CTA title={"Awesome news!"} desc={"We have a new product online "} cta={"Check it out!"} />
         <Albums />
+        <FullColorPage />
+        <FollowerNotifications />
       </div>
     );
+  }
+
+  counterComp = () => {
+    let { rootStore } = this.injected;
+    return(
+      <div className={classes.counterContainer}>
+        App on {rootStore.viewStore.page}
+        Counter ... {this.count}
+        <br />
+        <button onClick={this.handleInc}> + </button>
+        <button onClick={this.handleDec}> - </button>
+      </div>
+    )
   }
 
   handleInc = () => {

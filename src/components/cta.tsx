@@ -120,7 +120,10 @@ const Albums: React.StatelessComponent<{}> = () => {
       coverURL: "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
       albumURL: "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
     }
-  ]
+  ].map(function(currVal, idx){
+    (currVal as AlbumCardProps).key = `album_${idx}`
+    return currVal
+  })
   return(
     <article>
       <h2 className="f3 fw4 pa3 mv0">Albums</h2>
@@ -131,11 +134,10 @@ const Albums: React.StatelessComponent<{}> = () => {
   )
 }
 
-
 export {Albums}
 
-
 interface AlbumCardProps  {
+  key: string
   title: string
   artist: string
   coverURL: string
@@ -143,9 +145,9 @@ interface AlbumCardProps  {
 }
 
 const AlbumCard: React.StatelessComponent<AlbumCardProps> = (props) => {
-  const {title, artist, albumURL, coverURL}= props
+  const {title, artist, albumURL, coverURL, key}= props
   return(
-    <div className="fl w-50 w-25-m w-20-l pa2">
+    <div key={key} className="fl w-50 w-25-m w-20-l pa2">
       <a href={albumURL} className="db link dim tc">
         <img src={coverURL} alt="Frank Ocean Blonde Album Cover" className="w-100 db outline black-10"/>
         <dl className="mt2 f6 lh-copy">
@@ -158,3 +160,153 @@ const AlbumCard: React.StatelessComponent<AlbumCardProps> = (props) => {
     </div>
   )
 }
+
+const FullColorPage: React.StatelessComponent<{}> = ()=> {
+  return(
+    <article className="vh-100 dt w-100 bg-dark-pink">
+      <div className="dtc v-mid tc white ph3 ph4-l">
+        <h1 className="f6 f2-m f-subheadline-l fw6 tc">Vertically centering things in css is easy!</h1>
+      </div>
+    </article>
+  )
+}
+
+export {FullColorPage}
+
+
+const FollowerNotifications: React.StatelessComponent<{}> = () =>{
+  return(
+    <main className="mw6 center">
+      <article className="dt w-100 bb b--black-05 pb2 mt2">
+        <div className="dtc w2 w3-ns v-mid">
+          <img src="http://mrmrs.github.io/photos/p/2.jpg" className="ba b--black-10 db br-100 w2 w3-ns h2 h3-ns"/>
+        </div>
+        <div className="dtc v-mid pl3">
+          <h1 className="f6 f5-ns fw6 lh-title black mv0">Young Gatchell </h1>
+          <h2 className="f6 fw4 mt0 mb0 black-60">@yg</h2>
+        </div>
+        <div className="dtc v-mid">
+          <form className="w-100 tr">
+            <button className="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60" type="submit">+ Follow</button>
+          </form>
+        </div>
+      </article>
+      <article className="dt w-100 bb b--black-05 pb2 mt2">
+        <div className="dtc w2 w3-ns v-mid">
+          <img src="http://mrmrs.github.io/photos/p/3.jpg" className="ba b--black-10 db br-100 w2 w3-ns h2 h3-ns"/>
+        </div>
+        <div className="dtc v-mid pl3">
+          <h1 className="f6 f5-ns fw6 lh-title black mv0">Arnoldo Degraff</h1>
+          <h2 className="f6 fw4 mt0 mb0 black-60">@99xx88randomhandle</h2>
+        </div>
+        <div className="dtc v-mid">
+          <form className="w-100 tr">
+            <button className="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60" type="submit">+ Follow</button>
+          </form>
+        </div>
+      </article>
+      <article className="dt w-100 bb b--black-05 pb2 mt2">
+        <div className="dtc w2 w3-ns v-mid">
+          <img src="http://mrmrs.github.io/photos/p/4.jpg" className="ba b--black-10 db br-100 w2 w3-ns h2 h3-ns"/>
+        </div>
+        <div className="dtc v-mid pl3">
+          <h1 className="f6 f5-ns fw6 lh-title black mv0">Deirdre Lachance</h1>
+          <h2 className="f6 fw4 mt0 mb0 black-60">@favfavfav</h2>
+        </div>
+        <div className="dtc v-mid">
+          <form className="w-100 tr">
+            <button className="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60" type="submit">+ Follow</button>
+          </form>
+        </div>
+      </article>
+      <article className="dt w-100 bb b--black-05 pb2 mt2">
+        <div className="dtc w2 w3-ns v-mid">
+          <img src="http://mrmrs.github.io/photos/p/5.jpg" className="ba b--black-10 db br-100 w2 w3-ns h2 h3-ns"/>
+        </div>
+        <div className="dtc v-mid pl3">
+          <h1 className="f6 f5-ns fw6 lh-title black mv0">Frederic Starner</h1>
+          <h2 className="f6 fw4 mt0 mb0 black-60">@hungryhippofanatic</h2>
+        </div>
+        <div className="dtc v-mid">
+          <form className="w-100 tr">
+            <button className="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60" type="submit">+ Follow</button>
+          </form>
+        </div>
+      </article>
+      <article className="dt w-100 bb b--black-05 pb2 mt2">
+        <div className="dtc w2 w3-ns v-mid">
+          <img src="http://mrmrs.github.io/photos/p/6.jpg" className="ba b--black-10 db br-100 w2 w3-ns h2 h3-ns"/>
+        </div>
+        <div className="dtc v-mid pl3">
+          <h1 className="f6 f5-ns fw6 lh-title black mv0">Cleveland Ridout</h1>
+          <h2 className="f6 fw4 mt0 mb0 black-60">@purethinking</h2>
+        </div>
+        <div className="dtc v-mid">
+          <form className="w-100 tr">
+            <button className="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60" type="submit">+ Follow</button>
+          </form>
+        </div>
+      </article>
+      <article className="dt w-100 bb b--black-05 pb2 mt2">
+        <div className="dtc w2 w3-ns v-mid">
+          <img src="http://mrmrs.github.io/photos/p/7.jpg" className="ba b--black-10 db br-100 w2 w3-ns h2 h3-ns"/>
+        </div>
+        <div className="dtc v-mid pl3">
+          <h1 className="f6 f5-ns fw6 lh-title black mv0">Leticia Fearon</h1>
+          <h2 className="f6 fw4 mt0 mb0 black-60">@retrofeels</h2>
+        </div>
+        <div className="dtc v-mid">
+          <form className="w-100 tr">
+            <button className="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60" type="submit">+ Follow</button>
+          </form>
+        </div>
+      </article>
+      <article className="dt w-100 bb b--black-05 pb2 mt2">
+        <div className="dtc w2 w3-ns v-mid">
+          <img src="http://mrmrs.github.io/photos/p/10.jpg" className="ba b--black-10 db br-100 w2 w3-ns h2 h3-ns"/>
+        </div>
+        <div className="dtc v-mid pl3">
+          <h1 className="f6 f5-ns fw6 lh-title black mv0">Ahmad Backer</h1>
+          <h2 className="f6 fw4 mt0 mb0 black-60">@ahmadBB</h2>
+        </div>
+        <div className="dtc v-mid">
+          <form className="w-100 tr">
+            <button className="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60" type="submit">+ Follow</button>
+          </form>
+        </div>
+      </article>
+      <article className="dt w-100 bb b--black-05 pb2 mt2">
+        <div className="dtc w2 w3-ns v-mid">
+          <img src="http://mrmrs.github.io/photos/p/11.jpg" className="ba b--black-10 db br-100 w2 w3-ns h2 h3-ns"/>
+        </div>
+        <div className="dtc v-mid pl3">
+          <h1 className="f6 f5-ns fw6 lh-title black mv0">Carlie Noakes</h1>
+          <h2 className="f6 fw4 mt0 mb0 black-60">@carnoakes99</h2>
+        </div>
+        <div className="dtc v-mid">
+          <form className="w-100 tr">
+            <button className="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60" type="submit">+ Follow</button>
+          </form>
+        </div>
+      </article>
+    </main>
+  )
+}
+
+export {FollowerNotifications}
+
+
+const Navigation:React.StatelessComponent<{}> = ()=> {
+  return(
+    <header className="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+      <nav className="f6 fw6 ttu tracked">
+        <a className="link dim white dib mr3" href="#" title="Home">Home</a>
+        <a className="link dim white dib mr3" href="#" title="About">About</a>
+        <a className="link dim white dib mr3" href="#" title="Store">Store</a>
+        <a className="link dim white dib" href="#" title="Contact">Contact</a>
+      </nav>
+    </header>
+  )
+}
+
+export {Navigation}
