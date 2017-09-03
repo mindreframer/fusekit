@@ -1,11 +1,25 @@
-const { FuseBox, HTMLPlugin, Sparky, WebIndexPlugin, SassPlugin, CSSPlugin } = require("fuse-box");
+const { FuseBox, HTMLPlugin, Sparky, WebIndexPlugin, CSSResourcePlugin, SassPlugin, CSSPlugin } = require("fuse-box");
 
+
+const cssResourcePluginConfig = {
+  dist: 'dist/',
+  resolve: fileName => publicPath + fileName
+}
 const fuse = FuseBox.init({
 homeDir: "src",
   output: "dist/$name.js",
   plugins: [
+    [
+      /\.css$/,
+      CSSPlugin()
+    ],
     WebIndexPlugin({ template: "src/index.html" }),
-    [SassPlugin(), CSSPlugin()],
+    [
+      /.*\.scss/,
+      SassPlugin(),
+      CSSResourcePlugin(cssResourcePluginConfig),
+      CSSPlugin()
+    ],
   ]
 });
 
