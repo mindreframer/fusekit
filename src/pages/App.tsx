@@ -4,7 +4,7 @@ import { observable } from "mobx";
 import { observer, inject } from "mobx-react";
 import RootStore from "../stores/RootStore";
 
-import {CTA} from "../components/cta"
+import {CTA, ProductCard, Albums} from "../components/cta"
 
 interface ComponentProps {
 }
@@ -14,8 +14,8 @@ interface InjectedProps extends ComponentProps {
 }
 
 const classes = {
-  topContainer: "bg-orange f4",
-  counterContainer: "f5 pv4 ph2"
+  topContainer: " f4",
+  counterContainer: "f5 pv4 ph2 bg-orange"
 }
 
 @inject("rootStore")
@@ -38,6 +38,7 @@ class App extends Component<ComponentProps, any> {
         </div>
 
         <CTA title={"Awesome news!"} desc={"We have a new product online "} cta={"Check it out!"} />
+        <Albums />
       </div>
     );
   }
