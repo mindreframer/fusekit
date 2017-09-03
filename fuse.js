@@ -6,7 +6,7 @@ const cssResourcePluginConfig = {
   resolve: fileName => publicPath + fileName
 }
 const fuse = FuseBox.init({
-homeDir: "src",
+  homeDir: "src",
   output: "dist/$name.js",
   plugins: [
     [
