@@ -4,6 +4,8 @@ import { observable } from "mobx";
 import { observer, inject } from "mobx-react";
 import RootStore from "../stores/RootStore";
 
+import {CTA} from "../components/cta"
+
 interface ComponentProps {
 }
 
@@ -34,6 +36,8 @@ class App extends Component<ComponentProps, any> {
           <button onClick={this.handleInc}> + </button>
           <button onClick={this.handleDec}> - </button>
         </div>
+
+        <CTA title={"Awesome news!"} desc={"We have a new product online "} cta={"Check it out!"} />
       </div>
     );
   }
