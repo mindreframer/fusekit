@@ -12,7 +12,7 @@
     "@types/node": "^8.0.24",
     "@types/react": "^15.0.15",
     "@types/react-dom": "^0.14.23",
-    "fuse-box": "^2.2.2",
+    "fuse-box": "2.2.3-beta.10",
     "fuse-box-typechecker": "git://github.com/fuse-box/fuse-box-typechecker",
     "node-sass": "^4.5.3",
     "tachyons": "^4.8.0",
