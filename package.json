@@ -12,6 +12,7 @@
     "@types/node": "^8.0.24",
     "@types/react": "^15.0.15",
     "@types/react-dom": "^0.14.23",
+    "@types/react-virtualized": "^9.7.3",
     "fuse-box": "2.2.3-beta.10",
     "fuse-box-typechecker": "git://github.com/fuse-box/fuse-box-typechecker",
     "node-sass": "^4.5.3",
@@ -23,9 +24,12 @@
     "uglify-js": "^2.8.22"
   },
   "dependencies": {
+
     "mobx": "^3.2.2",
     "mobx-react": "^4.2.2",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-virtualized": "^9.9.0",
+    "prop-types": "^15.5.10"
   }
 }

@@ -48,7 +48,7 @@ export { Products };
 
 const ProductCard: React.StatelessComponent<{}> = () => {
   return (
-    <article className="fl br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center ">
+    <article className="fl br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center bg-red">
       <img
         src="http://placekitten.com/g/600/300"
         className="db w-100 br2 br--top"

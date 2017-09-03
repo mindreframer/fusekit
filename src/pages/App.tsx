@@ -16,6 +16,7 @@ import {
 } from "../components/cta";
 
 import { GridLayout } from "../components/grid";
+import { ListExample } from "../components/list";
 
 interface ComponentProps {}
 
@@ -54,8 +55,8 @@ class App extends Component<ComponentProps, any> {
           <FullColorPage />
           <FollowerNotifications />
           <SingleColumnBlog />
+          {/* < ListExample /> */}
         </div>
-
 
         <GridLayout />
       </div>
