@@ -4,7 +4,7 @@ import { observable } from "mobx";
 import { observer, inject } from "mobx-react";
 import RootStore from "../stores/RootStore";
 
-import {CTA, ProductCard, Albums, FullColorPage, FollowerNotifications, Navigation} from "../components/cta"
+import {CTA, ProductCard, Albums, FullColorPage, FollowerNotifications, Navigation, SingleColumnBlog} from "../components/cta"
 
 interface ComponentProps {
 }
@@ -33,11 +33,12 @@ class App extends Component<ComponentProps, any> {
           <Navigation />
         </div>
         <div className={classes.topContainer}>
-          {this.counterComp()}
+          {/* {this.counterComp()} */}
           <CTA title={"Latest Updates"} desc={"We have a new product online "} cta={"Try now!"} />
           <Albums />
           <FullColorPage />
           <FollowerNotifications />
+          <SingleColumnBlog />
         </div>
       </div>
     );
