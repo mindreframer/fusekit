@@ -57,7 +57,7 @@ const ProductCard: React.StatelessComponent<{}> = () => {
       <div className="pa2 ph3-ns pb3-ns">
         <div className="dt w-100 mt1">
           <div className="dtc">
-            <h1 className="f5 f4-ns mv0">Cat</h1>
+            <h1 className="f5 f4-ns mv0">Cats</h1>
           </div>
           <div className="dtc tr">
             <h2 className="f5 mv0">$1,000</h2>
@@ -400,7 +400,7 @@ export { FollowerNotifications };
 
 const Navigation: React.StatelessComponent<{}> = () => {
   return (
-    <header className="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+    <header className="bg-black fixed w-100 ph3 pv3 pv3-ns ph4-m ph5-l">
       <nav className="f6 fw6 ttu tracked">
         <a className="link dim white dib mr3" href="#" title="MyApp">
           MyApp

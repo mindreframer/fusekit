@@ -17,6 +17,9 @@ import {
 
 import { GridLayout } from "../components/grid";
 import { ListExample } from "../components/list";
+import { Header } from "../components/header";
+import { Header2 } from "../components/header2";
+
 
 interface ComponentProps {}
 
@@ -50,6 +53,11 @@ class App extends Component<ComponentProps, any> {
             desc={"We have a new product online "}
             cta={"Try now!"}
           />
+          <Header />
+          <Header2 />
+          <Header2 />
+          <Header2 />
+          <Header2 />
           <Products />
           <Albums />
           <FullColorPage />
