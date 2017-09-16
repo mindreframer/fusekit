@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node fuse.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +13,7 @@
     "@types/react": "^15.0.15",
     "@types/react-dom": "^0.14.23",
     "@types/react-virtualized": "^9.7.3",
-    "fuse-box": "2.2.3-beta.10",
+    "fuse-box": "2.2.31",
     "fuse-box-typechecker": "git://github.com/fuse-box/fuse-box-typechecker",
     "node-sass": "^4.5.3",
     "tachyons": "^4.8.0",
