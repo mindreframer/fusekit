@@ -1,91 +1,93 @@
 import * as React from "react";
 
+const data = [
+  {
+    title: "Blonde",
+    artist: "Frank Ocean",
+    coverURL:
+      "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
+    albumURL:
+      "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
+  },
+  {
+    title: "Blonde",
+    artist: "Frank Ocean",
+    coverURL:
+      "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
+    albumURL:
+      "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
+  },
+  {
+    title: "Blonde",
+    artist: "Frank Ocean",
+    coverURL:
+      "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
+    albumURL:
+      "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
+  },
+  {
+    title: "Blonde",
+    artist: "Frank Ocean",
+    coverURL:
+      "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
+    albumURL:
+      "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
+  },
+  {
+    title: "Blonde",
+    artist: "Frank Ocean",
+    coverURL:
+      "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
+    albumURL:
+      "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
+  },
+  {
+    title: "Blonde",
+    artist: "Frank Ocean",
+    coverURL:
+      "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
+    albumURL:
+      "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
+  },
+  {
+    title: "Blonde",
+    artist: "Frank Ocean",
+    coverURL:
+      "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
+    albumURL:
+      "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
+  },
+  {
+    title: "Blonde",
+    artist: "Frank Ocean",
+    coverURL:
+      "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
+    albumURL:
+      "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
+  },
+  {
+    title: "Blonde",
+    artist: "Frank Ocean",
+    coverURL:
+      "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
+    albumURL:
+      "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
+  },
+  {
+    title: "Blonde",
+    artist: "Frank Ocean",
+    coverURL:
+      "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
+    albumURL:
+      "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
+  }
+].map(function(currVal, idx) {
+  (currVal as AlbumCardProps).key = `album_${idx}`;
+  return currVal;
+});
+
+
 const Albums: React.StatelessComponent<{}> = () => {
-  const data = [
-    {
-      title: "Blonde",
-      artist: "Frank Ocean",
-      coverURL:
-        "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
-      albumURL:
-        "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
-    },
-    {
-      title: "Blonde",
-      artist: "Frank Ocean",
-      coverURL:
-        "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
-      albumURL:
-        "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
-    },
-    {
-      title: "Blonde",
-      artist: "Frank Ocean",
-      coverURL:
-        "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
-      albumURL:
-        "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
-    },
-    {
-      title: "Blonde",
-      artist: "Frank Ocean",
-      coverURL:
-        "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
-      albumURL:
-        "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
-    },
-    {
-      title: "Blonde",
-      artist: "Frank Ocean",
-      coverURL:
-        "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
-      albumURL:
-        "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
-    },
-    {
-      title: "Blonde",
-      artist: "Frank Ocean",
-      coverURL:
-        "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
-      albumURL:
-        "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
-    },
-    {
-      title: "Blonde",
-      artist: "Frank Ocean",
-      coverURL:
-        "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
-      albumURL:
-        "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
-    },
-    {
-      title: "Blonde",
-      artist: "Frank Ocean",
-      coverURL:
-        "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
-      albumURL:
-        "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
-    },
-    {
-      title: "Blonde",
-      artist: "Frank Ocean",
-      coverURL:
-        "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
-      albumURL:
-        "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
-    },
-    {
-      title: "Blonde",
-      artist: "Frank Ocean",
-      coverURL:
-        "http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png",
-      albumURL:
-        "https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music"
-    }
-  ].map(function(currVal, idx) {
-    (currVal as AlbumCardProps).key = `album_${idx}`;
-    return currVal;
-  });
   return (
     <article>
       <h2 className="f3 fw4 pa3 mv0">Albums</h2>
