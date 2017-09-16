@@ -4,7 +4,7 @@ import {MyStyles} from './styles'
 
 const Header2: React.StatelessComponent<{}> = () => {
   return (
-    <div className={MyStyles.greenClassHover.toString()}>
+    <div className={MyStyles.greenClassHover}>
       header2
     </div>
   );
