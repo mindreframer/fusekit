@@ -6,20 +6,18 @@ import RootStore from "../stores/RootStore";
 
 import {
   CTA,
-  ProductCard,
   Albums,
   FullColorPage,
   FollowerNotifications,
   Navigation,
   SingleColumnBlog,
   Products
-} from "../components/cta";
+} from "../components/samples";
 
 import { GridLayout } from "../components/grid";
 import { ListExample } from "../components/list";
 import { Header } from "../components/header";
 import { Header2 } from "../components/header2";
-
 
 interface ComponentProps {}
 
